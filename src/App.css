@@ -1,5 +1,19 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-flow: column;
+  height: 100vh;
+}
+
+.appContainer {
+  width: 100%;
+  background-color: #D6EFC7;
+  height: 100%;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
 }
 
 .App-logo {
