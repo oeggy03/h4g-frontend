@@ -1,4 +1,4 @@
-import React, { Render, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, Grid, Card, CardContent, CardActionArea, Typography } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
@@ -33,7 +33,7 @@ function BestBuddiesActivities() {
         return navigate("/activities/"+id);
     }
 
-    if (ActivitiesE.length === 0) {
+    if (ActivitiesE.length === 0 || !Success) {
         return(
             <Typography sx = {{
                 fontSize:16,

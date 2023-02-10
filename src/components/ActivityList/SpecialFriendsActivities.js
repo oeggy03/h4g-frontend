@@ -33,7 +33,7 @@ function SpecialFriendsActivities() {
         return navigate("/activities/"+id);
     }
 
-    if (ActivitiesD.length === 0) {
+    if (ActivitiesD.length === 0 || !Success) {
         return(
             <Typography sx = {{
                 fontSize:16,
