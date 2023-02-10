@@ -50,3 +50,11 @@
     transform: rotate(360deg);
   }
 }
+
+.plainText{
+  font-size: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-weight: 600;
+  color: #194e48;
+}
