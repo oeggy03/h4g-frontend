@@ -7,6 +7,8 @@ import Homepage from './components/Homepage/Homepage';
 import Navbar from './components/Navbar/Navbar';
 import ActivityList from './components/ActivityList/ActivityList';
 import { button } from '@mui/material';
+import Activity from './components/Activity/Activity';
+import UpdateActivity from './components/UpdateActivity/UpdateActivity';
 
 function App() {
   const [isSignedIn, setSignedIn] = useState(false); //tracks whether user is signed in
@@ -58,6 +60,8 @@ function App() {
         <Route path = "/" element = {<Homepage updateSI = {UpdateSignedIn} statusSI = {isSignedIn}/>} />
         <Route path = "/signup" element = {<Signup updateSI = {UpdateSignedIn}/>} />
         <Route path = "/activities" element = {<ActivityList /> }/>
+        <Route path = "/activities/:id" element = {<Activity/>} />
+        <Route path = "/activities/:id/update" element = {<UpdateActivity/>} />
       </Routes>
     </div>
   </div>);
