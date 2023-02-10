@@ -15,7 +15,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 function App() {
   const THEME = createTheme({
     typography: {
-      allVariants: { fontFamily: 'montserrat'}
+      allVariants: { fontFamily: 'montserrat', color:'#194E48' }
     }
   });
 
@@ -70,7 +70,8 @@ function App() {
       </Routes>
     </div>
   </div>
-  </ThemeProvider>);
+  </ThemeProvider>
+  );
 }
 
 export default App;
