@@ -15,8 +15,9 @@ function ActivityList() {
           }}
         >
             <Typography sx={{
-                "padding":"2%",
-                fontSize:20
+                "padding-top":"2%",
+                "padding-bottom":"1%",
+                "fontSize":20
             }}
             >From your Best Buddies!</Typography>
             <BestBuddiesActivities />
@@ -26,6 +27,7 @@ function ActivityList() {
             }}/>
             <Typography sx = {{
                 "padding-top":"2%",
+                "padding-bottom":"1%",
                 "fontSize":20
             }}
             > From your Special Friends! </Typography>
