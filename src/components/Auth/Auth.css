@@ -2,11 +2,6 @@
     width: 400px;
 }
 
-
-.overlaySignIn {
-    background: rgba(49,49,49,0.8);
-}
-
 /* Sign up */
 
 .signUpFieldDiv {
@@ -40,7 +35,7 @@ body.signupModal, body.signinModal {
     position: fixed;
 }
 
-.overlaySignUp {
+.overlaySignUp, .overlaySignIn {
     background: #194e48;
     opacity: 50%;
 }
