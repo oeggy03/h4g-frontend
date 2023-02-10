@@ -1,5 +1,4 @@
 import { Box, Grid, Divider, Typography } from '@mui/material';
-import { AccessibleForwardIcon } from '@mui/icons-material';
 
 function Homepage() {
     return(
@@ -37,7 +36,7 @@ function Homepage() {
             />
             </Grid>
         </Grid>
-        <Box mt={15}/>
+        <Box mt={12}/>
         <Grid container>
             <Grid item xs={1}></Grid>
             <Grid item xs={6}>

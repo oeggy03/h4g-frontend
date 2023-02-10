@@ -49,7 +49,6 @@ function SpecialFriendsActivities() {
             spacing={2} 
             alignItems="center"
             sx={{
-                "padding-top":"1%",
                 "padding-left":"15%",
                 "padding-right":"15%",
             }}>
@@ -57,7 +56,7 @@ function SpecialFriendsActivities() {
                     <Grid item xs={4}>
                         <Card 
                         sx={{ 
-                            backgroundColor: "#C8D199",
+                            backgroundColor: "#D6EFC7",
                             padding: "1%"
                         }}
                         >
