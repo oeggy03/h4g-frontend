@@ -9,7 +9,6 @@ import ActivityList from './components/ActivityList/ActivityList';
 import { button } from '@mui/material';
 import Activity from './components/Activity/Activity';
 import UpdateActivity from './components/UpdateActivity/UpdateActivity';
-import ProfilePublic from './components/ProfilePublic/ProfilePublic';
 
 function App() {
   const [isSignedIn, setSignedIn] = useState(false); //tracks whether user is signed in
@@ -63,7 +62,7 @@ function App() {
         <Route path = "/activities" element = {<ActivityList /> }/>
         <Route path = "/activities/:id" element = {<Activity/>} />
         <Route path = "/activities/:id/update" element = {<UpdateActivity/>} />
-        <Route path = "/profile/:id" element = {<ProfilePublic/>} />
+        {/* <Route path = "/profile/:id" element = {<ProfilePublic/>} /> */}
       </Routes>
     </div>
   </div>);
