@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Grid, Card, CardContent, Typography } from '@mui/material';
+import { Box, Grid, Card, CardContent, Typography, CardActionArea } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 function SpecialFriendsActivities() {
     const [Success, setSuccess] = useState(false);
@@ -27,6 +28,11 @@ function SpecialFriendsActivities() {
         )
     }, [id])
 
+    const navigate = useNavigate();
+    function handleClick(id) {
+        return navigate("/activities/"+id);
+    }
+
     if (ActivitiesD.length === 0) {
         return(
             <Typography sx = {{
@@ -52,9 +58,12 @@ function SpecialFriendsActivities() {
                         <Card 
                         sx={{ 
                             backgroundColor: "#C8D199",
-                            height: "150px"
+                            padding: "1%"
                         }}
                         >
+                            <CardActionArea
+                              onClick={() => handleClick(act.id)}
+                            >
                             <CardContent>
                                 <Box>
                                 <Typography 
@@ -76,6 +85,7 @@ function SpecialFriendsActivities() {
                                 </Typography>
                                 </Box>
                             </CardContent>
+                            </CardActionArea>
                         </Card>
                     </ Grid>
                 ))}
