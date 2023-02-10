@@ -5,6 +5,8 @@ import 'tachyons';
 import Signup from './components/Auth/Signup';
 import Homepage from './components/Homepage/Homepage';
 import Navbar from './components/Navbar/Navbar';
+import Activity from './components/Activity/Activity';
+import UpdateActivity from './components/UpdateActivity/UpdateActivity';
 
 function App() {
   const [isSignedIn, setSignedIn] = useState(false); //tracks whether user is signed in
@@ -55,6 +57,8 @@ function App() {
       <Routes>
         <Route path = "/" element = {<Homepage updateSI = {UpdateSignedIn} statusSI = {isSignedIn}/>} />
         <Route path = "/signup" element = {<Signup updateSI = {UpdateSignedIn}/>} />
+        <Route path = "/activities/:id" element = {<Activity/>} />
+        <Route path = "/activities/:id/update" element = {<UpdateActivity/>} />
       </Routes>
     </div>
   </div>);

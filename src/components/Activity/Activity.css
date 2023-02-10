@@ -1,0 +1,133 @@
+.viewActivityWindow{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.viewActivityWindowSuccess{
+    width:80%;
+}
+
+.activityContentWrapper{
+    margin-top: 4%;
+    margin-left: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #194e48;
+}
+
+.activityViewTitleLabel, .activityDescViewIntro, .activityViewPartiSecIntro, .activityLocViewIntro {
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #fbd686;
+    padding: 5px;
+    
+}
+
+.activityViewTitle{
+    font-weight: 700;
+    font-size: 70px;
+    text-align: left;
+}
+
+.activityViewIntroSec {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    
+}
+
+.activityViewCreator{
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.activityViewDescSec, .activityViewLocSec{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-top: 3%;
+}
+
+.activityDescView, .activityLocView{
+    text-align: left;
+    font-size: 20px;
+    word-spacing: 8px;
+    line-height: 150%;
+    border-left: #194e48;
+    border-style: solid;
+    border-width: 0px 0px 0px 2px ;
+    padding-left: 2%;
+    margin-left: 1%;
+    white-space: pre-line;
+}
+
+.activityViewPartiSecContent{
+    border-left: #194e48;
+    border-style: solid;
+    border-width: 0px 0px 0px 2px ;
+    padding-left: 2%;
+    margin-left: 1%;
+}
+
+.activityViewOptionsOwner {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.ownerButtonEdit, .ownerButtonDelete {
+    margin-top: 5%;
+    border-radius: 5px;
+}
+
+.userButtonJoin, .userButtonLeave {
+    margin-top: 30%;
+    border-radius: 50px;
+    width: 130%;
+    font-size: 15px;
+    padding: 10%;
+}
+.ownerButtonEdit:hover, .ownerButtonDelete:hover, .userButtonJoin:hover, .userButtonLeave:hover {
+    cursor: pointer;
+}
+
+.ownerButtonEdit, .userButtonJoin {
+    background-color: #194e48;
+}
+
+.ownerButtonDelete, .userButtonLeave {
+    background-color: #ff483e;
+}
+
+.activityViewPartiSec {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.activityViewPartiSecParticipant{
+    text-align: left;
+    font-size: 20px;
+    word-spacing: 8px;
+    line-height: 150%;
+    margin-top: 5%;
+}
+
+.activityViewPartiSecSpecial{
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.activityViewPartiSecBest{
+    text-align: left;
+    margin-top: 20%;
+    font-size: 18px;
+    font-weight: 600;
+}

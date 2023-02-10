@@ -1,0 +1,319 @@
+.postContentView {
+    white-space: pre-wrap;
+}
+
+.plainText {
+    margin-top: 30px;
+}
+
+.viewPostWindow {
+    flex-grow: 1;
+    width: 100%;
+}
+
+.viewPostWindowSuccess {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+}
+
+.createPostScroll {
+    flex-grow: 1;
+    height: 100%;
+}
+
+.viewCreatedPostButton {
+    margin-top: 20px;
+}
+
+.titleBar {
+    width: 1000px;
+    padding-left: 13px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-right: 13px;
+    background-color: #ddd;
+    resize: none;
+    height: 60px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #727272;
+
+}
+
+.createWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #194e48;
+}
+.createIntro {
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.editFieldSection {
+    width: 1000px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.editFieldActivity {
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.createBody {
+    width: 1000px;
+    border: none;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #ddd;
+    resize: none;
+    min-height: 300px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #727272;
+}
+
+.updateActivityButton {
+    width: 300px;
+    background-color: #194e48;
+    border-width: 0px;
+    border-radius: 8px;
+}
+
+.updateActivityButton:hover {
+    cursor: pointer;
+}
+
+.postContentWrapper{
+    margin-top: 2%;
+    box-shadow: 5px 5px 15px -4px;
+    width: 85%;
+    margin-bottom: 1%;
+}
+
+.postContentView {
+    line-height: 150%;
+    opacity: 90%;
+    padding:2%;
+    text-align: left;
+    border: 0.2px solid rgba(0, 0, 0, .5);
+    overflow: hidden;    
+}
+
+.postDescView {
+    line-height: 150%;
+    opacity: 90%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: left;
+    border: 0.2px solid rgba(0, 0, 0, .5);
+}
+
+.postDescViewIntro {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.postViewDescSec {
+    margin-left: 5%;
+    margin-right: 5%;
+    overflow: hidden;
+}
+
+.postContViewIntro {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.postViewContSec {
+    margin-top: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+}
+
+.postViewTitle {
+    font-weight: 600;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.postViewIntroSec {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 60px;
+}
+
+.postViewCreator {
+    font-weight: 500;
+}
+
+.postViewCreatorLight {
+    font-weight: 400;
+}
+
+.postViewOptionsOwner {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.ownerButton {
+    width: 150px;
+}
+
+.ownerButton:hover {
+    cursor: pointer;
+}
+
+.postViewDeleteConfirmBut {
+    margin-top: 20px;
+}
+
+.createCommentSec {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.commentInputBar {
+    width: 60%;
+    height: 100px;
+    border: none;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #ddd;
+}
+
+.createCommentButton {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.createCommentButton:hover {
+    cursor: pointer;
+}
+
+.noCommentsYet{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.commentList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 40px;
+    border: 0.2px solid rgba(0, 0, 0, .5);
+    height: 450px;
+    overflow: scroll;
+}
+
+.commentWrapper {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   width: 85%; 
+   margin-bottom: 20px;
+   margin-top: 20px;
+   border-left: 2px solid rgba(0, 0, 0, .5);
+   padding-left: 20px;
+}
+
+.commentContent {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    
+    
+    
+}
+
+.contentOfComment {
+    white-space: pre-wrap;
+    text-align: left;
+    line-height: 150%;
+    opacity: 90%;
+}
+
+.createdByComment {
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.updateActivityNote {
+    margin-bottom: 60px;
+    font-size: 20px;
+}
+
+.toBold {
+    font-weight: 500;
+}
+
+.commentOptions {
+    margin-top: 20px;
+}
+.commentOptionDelete {
+    font-weight: 400;
+    font-size: 14px;
+    color: red;
+}
+
+.commentOptionDelete:hover {
+    cursor: pointer;
+}
+
+.commentOptionEdit {
+    font-weight: 400;
+    font-size: 14px;
+    color: navy;
+    margin-right: 15px;
+}
+
+.commentOptionEdit:hover {
+    cursor: pointer;
+}
+
+.editCommentField {
+    width: 60%;
+    height: 80px;
+    border: none;
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #ddd;
+}
