@@ -3,7 +3,7 @@ import { Link, useParams } from "react-router-dom"
 import ActivityContent from "./ActivityContent"
 import "./Activity.css"
 
-function Activity() {
+function Activity(statusSI) {
     const {id} = useParams()
 
     const [success, setSuccess] = useState(false) //activity retrieved success?
@@ -58,7 +58,7 @@ function Activity() {
 
     return (
         <div className="viewActivityWindow">
-            {!success ? <div className="plainText">Sorry, activity not found.</div> :
+            {!success ? <div className="plainText">{"Sorry, activity cannot be found - either you are signed out, or it has been deleted." }</div> :
             (!deleted ? <div className="viewActivityWindowSuccess">
                 <ActivityContent id={id} ownership={ownership} joined={joined} creator={creator} activity={activity} participants={participants} fetchDelete={fetchDelete}/>
                 {/* <ViewPostComments postid={id}/> */}

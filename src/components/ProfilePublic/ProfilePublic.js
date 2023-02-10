@@ -5,12 +5,18 @@ import "./ProfilePublic.css"
 function Profile({userid, phone, email}) {
     const {id} = useParams()
 
+    const [createdActivities, setCreatedActivities] = useState([])
+    const [joinedActivities, setJoinedActivities] = useState([])
+
     const [activities, setActivities] = useState([])
     const [success, setSuccess] = useState(false)
 
     const [username, setUsername] =useState("")
     const [type, setType] =useState(2)
     const [name, setName] =useState("")
+
+    //for activities navbar
+    const [choice, setChoice] = useState(0)
     
     useEffect(() => {
         const fetchOptions = {
@@ -31,7 +37,10 @@ function Profile({userid, phone, email}) {
             setUsername(res.profile.username);
             setType(res.profile.type);
             setName(res.profile.name);
-            setActivities(res.activities);
+            setActivities(res.activities_created);
+
+            setCreatedActivities(res.activities_created);
+            setJoinedActivities(res.activities_joined)
         });
 
     },[id, userid])
@@ -70,7 +79,19 @@ function Profile({userid, phone, email}) {
                     </div>
                 </div> 
                 <div className="profilePostSection">
-                    <div className="profileYourPosts">My activities:</div>
+                    <nav className="profileYourPosts">
+                        <div className="profileYourPostsTitle"> My activities:</div>
+                        <div className="profileYourPostsButtons">
+                            <button className={choice === 0 ? "activityTypeChosen" : "activityTypeToChoose"} 
+                                onClick={() => {setChoice(0); setActivities(createdActivities)}}>
+                                Created
+                            </button>
+                            <button className={choice === 1 ? "activityTypeChosen" : "activityTypeToChoose"} 
+                                onClick={() => {setChoice(1); setActivities(joinedActivities)}}>
+                                Joined
+                            </button>
+                        </div>
+                    </nav>
                     {activities.length === 0?
                     <div className="plainText">No activities yet!</div>
                     : activities.map((activity) => {

@@ -54,7 +54,7 @@ function App() {
         <Route path = "/" element = {<Homepage updateSI = {UpdateSignedIn} statusSI = {isSignedIn}/>} />
         <Route path = "/signup" element = {<Signup updateSI = {UpdateSignedIn}/>} />
         <Route path = "/activities" element = {<ActivityList /> }/>
-        <Route path = "/activities/:id" element = {<Activity/>} />
+        <Route path = "/activities/:id" element = {<Activity statusSI = {isSignedIn}/>} />
         <Route path = "/activities/:id/update" element = {<UpdateActivity/>} />
         <Route path = "/profile/:id" element = {<ProfilePublic userid={userid} phone={phone} email={email} />} />
       </Routes>
