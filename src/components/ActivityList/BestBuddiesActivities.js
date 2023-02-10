@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Box, Grid, Card, CardContent, Typography } from '@mui/material';
+import { Box, Grid, Card, CardContent, CardActionArea, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 function BestBuddiesActivities() {
     const [Success, setSuccess] = useState(false);
@@ -27,7 +28,12 @@ function BestBuddiesActivities() {
         )
     }, [id])
 
-    if (ActivitiesE.length === 0) {
+    const navigate = useNavigate();
+    function handleClick(id) {
+        return navigate("/activities/"+id);
+    }
+
+    if (ActivitiesE.length === 0 || !Success) {
         return(
             <Typography sx = {{
                 fontSize:16,
@@ -43,7 +49,6 @@ function BestBuddiesActivities() {
             spacing={2} 
             alignItems="center"
             sx={{
-                "padding-top":"1%",
                 "padding-left":"15%",
                 "padding-right":"15%",
             }}>
@@ -51,12 +56,14 @@ function BestBuddiesActivities() {
                     <Grid item xs={4}>
                         <Card 
                         sx={{ 
-                            backgroundColor: "#C8D199",
-                            height: "150px",
+                            backgroundColor: "#D6EFC7",
                             padding: "1%",
-                            
+                            boxShadow:5
                         }}
                         >
+                            <CardActionArea 
+                              onClick={() => handleClick(act.id)}
+                            >
                             <CardContent>
                                 <Box>
                                 <Typography 
@@ -78,6 +85,7 @@ function BestBuddiesActivities() {
                                 </Typography>
                                 </Box>
                             </CardContent>
+                            </CardActionArea>
                         </Card>
                     </ Grid>
                 ))}

@@ -6,7 +6,6 @@ import Signup from './components/Auth/Signup';
 import Homepage from './components/Homepage/Homepage';
 import Navbar from './components/Navbar/Navbar';
 import ActivityList from './components/ActivityList/ActivityList';
-import { button } from '@mui/material';
 import Activity from './components/Activity/Activity';
 import UpdateActivity from './components/UpdateActivity/UpdateActivity';
 import ProfilePublic from './components/ProfilePublic/ProfilePublic';
@@ -15,12 +14,9 @@ function App() {
   const [isSignedIn, setSignedIn] = useState(false); //tracks whether user is signed in
 
   //user details, which we can send to the Profile component instead of getUser again.
-  const [username, setUsername] = useState("")
-  const [name, setName] = useState("")
   const [phone, setPhone] = useState("")
   const [email, setEmail] = useState("")
   const [userid, setID] = useState("")
-  const [type, setType] = useState("")
 
 
   //We retrieve the user's data first. 
@@ -38,12 +34,9 @@ function App() {
 
         return response.json()})
     .then(res => {
-        setUsername(res.username)
         setID(res.id)
         setEmail(res.email)
-        setName(res.name)
         setPhone(res.phone)
-        setType(res.type)
     });
   })
 
@@ -55,7 +48,7 @@ function App() {
 
   return (
   <div className="App">
-    <Navbar updateSI = {UpdateSignedIn} statusSI = {isSignedIn}/>
+    <Navbar updateSI = {UpdateSignedIn} statusSI = {isSignedIn} userid={userid}/>
     <div className='appContainer'>
       <Routes>
         <Route path = "/" element = {<Homepage updateSI = {UpdateSignedIn} statusSI = {isSignedIn}/>} />
@@ -63,7 +56,7 @@ function App() {
         <Route path = "/activities" element = {<ActivityList /> }/>
         <Route path = "/activities/:id" element = {<Activity/>} />
         <Route path = "/activities/:id/update" element = {<UpdateActivity/>} />
-        <Route path = "/profile/:id" element = {<ProfilePublic/>} />
+        <Route path = "/profile/:id" element = {<ProfilePublic userid={userid} phone={phone} email={email} />} />
       </Routes>
     </div>
   </div>);
