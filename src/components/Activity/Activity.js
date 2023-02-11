@@ -3,14 +3,16 @@ import { Link, useParams } from "react-router-dom"
 import ActivityContent from "./ActivityContent"
 import "./Activity.css"
 
-function Activity() {
+function Activity(statusSI) {
     const {id} = useParams()
 
     const [success, setSuccess] = useState(false) //activity retrieved success?
     const [deleted, setDeleted] = useState(false) //activity deleted?
 
+    const [userid, setUserID] = useState({})
     const [activity, setActivity] = useState({})
     const [participants, setParticipants] = useState([])
+    const [comments, setComments] = useState([])
     const [joined, setJoined] = useState(false)
     const [creator, setCreator] = useState("")
     const [ownership, setOwnership] = useState(false)
@@ -37,6 +39,8 @@ function Activity() {
                 setOwnership(res.owner)
                 setJoined(res.joined)
                 setParticipants(res.participants)
+                setComments(res.comments)
+                setUserID(res.user_id)
             }
 
         )
@@ -58,9 +62,9 @@ function Activity() {
 
     return (
         <div className="viewActivityWindow">
-            {!success ? <div className="plainText">Sorry, activity not found.</div> :
+            {!success ? <div className="plainText">{"Sorry, activity cannot be found - either you are signed out, or it has been deleted." }</div> :
             (!deleted ? <div className="viewActivityWindowSuccess">
-                <ActivityContent id={id} ownership={ownership} joined={joined} creator={creator} activity={activity} participants={participants} fetchDelete={fetchDelete}/>
+                <ActivityContent userid={userid} id={id} ownership={ownership} joined={joined} creator={creator} activity={activity} participants={participants} fetchDelete={fetchDelete} comments={comments}/>
                 {/* <ViewPostComments postid={id}/> */}
                 
             </div> : 

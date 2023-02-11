@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
+import Comments from "./Comments"
 
-const ActivityContent = ({id, ownership, joined, creator, activity, participants, fetchDelete}) => {
+const ActivityContent = ({userid, id, ownership, joined, creator, activity, participants, fetchDelete, comments}) => {
     function fetchJoin() {
         const data = {
             activity_id:id
@@ -72,7 +73,9 @@ const ActivityContent = ({id, ownership, joined, creator, activity, participants
                 <div className="activityViewPartiSecSpecial">Special Friends:</div>
                 {participants.map((participant, i) => {
                     if(participant.type === 0){
-                        return(<div className="activityViewPartiSecParticipant">{participant.username}</div>)
+                        return(<div className="activityViewPartiSecParticipant">
+                                <Link to={"/profile/"+participant.id}>{participant.username}</Link>
+                            </div>)
                     } else {
                         return (null)
                     }
@@ -80,7 +83,9 @@ const ActivityContent = ({id, ownership, joined, creator, activity, participants
                 <div className="activityViewPartiSecBest">Best Buddies:</div>
                 {participants.map((participant, i) => {
                     if(participant.type === 1){
-                        return(<div className="activityViewPartiSecParticipant">{participant.username}</div>)
+                        return(<div className="activityViewPartiSecParticipant">
+                                <Link to={"/profile/"+participant.id}>{participant.username}</Link>
+                                </div>)
                     } else {
                         return (null)
                     }
@@ -94,6 +99,7 @@ const ActivityContent = ({id, ownership, joined, creator, activity, participants
             <div className="alreadyJoin">
                 <div class="f6 link dim ph3 pv2 mb2 dib white userButtonLeave" onClick={fetchLeave}>Leave Activity</div> 
             </div>) }
+            <Comments userid={userid} comments={comments} actid={id}/>
         </div>
         
     </div>)
