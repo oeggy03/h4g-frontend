@@ -53,11 +53,12 @@ function SpecialFriendsActivities() {
                 "padding-right":"15%",
             }}>
                 {ActivitiesD.map((act) => (
-                    <Grid item xs={4}>
+                    <Grid item xs={12}>
                         <Card 
                         sx={{ 
                             backgroundColor: "#D6EFC7",
-                            padding: "1%"
+                            padding: "1%",
+                            boxShadow: 3
                         }}
                         >
                             <CardActionArea
