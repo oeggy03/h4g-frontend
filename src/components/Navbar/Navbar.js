@@ -4,7 +4,7 @@ import SignIn from "../Auth/Signin";
 import SignUp from "../Auth/Signup";
 import "./Navbar.css"
 
-function Navbar({updateSI, statusSI}) {
+function Navbar({updateSI, statusSI, userid}) {
     const [showSignIn, setShowSI] = useState(false) //whether we should show the signin popup
     const [showSignUp, setShowSU] = useState(false) //whether we should show the signup popup 
 
@@ -56,7 +56,7 @@ function Navbar({updateSI, statusSI}) {
         <ul className='navRight'>
             {statusSI ? null : <div className='navPath' onClick={activateSignIn}>Sign In</div>}
             {statusSI ? null : <div className='navPath' onClick={activateSignUp}>Sign Up</div>}
-            {statusSI? <CustomLink to = '/profile'>Profile</CustomLink> : null}
+            {statusSI? <CustomLink to = {'/profile/'+ userid}>Profile</CustomLink> : null}
             {statusSI? <div className='navPath' onClick={()=>SignOut()}>Sign Out</div> : null}
         </ul>
         {showSignIn?<SignIn toggle={deactivateSignIn} updater={updateSI}/>:null}

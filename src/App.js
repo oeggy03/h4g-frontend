@@ -9,6 +9,7 @@ import ActivityList from './components/ActivityList/ActivityList';
 import Activity from './components/Activity/Activity';
 import UpdateActivity from './components/UpdateActivity/UpdateActivity';
 import ProfilePublic from './components/ProfilePublic/ProfilePublic';
+
 import CreateActivity from './components/CreateActivity/CreateActivity';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
@@ -65,13 +66,16 @@ function App() {
         <Route path = "/activities" element = {<ActivityList /> }/>
         <Route path = "/activities/:id" element = {<Activity/>} />
         <Route path = "/activities/:id/update" element = {<UpdateActivity/>} />
+
         <Route path = "/create-activity" element = {<CreateActivity/>} />
         <Route path = "/profile/:id" element = {<ProfilePublic userid={userid} phone={phone} email={email} />} />
       </Routes>
     </div>
   </div>
+
   </ThemeProvider>
   );
+
 }
 
 export default App;
