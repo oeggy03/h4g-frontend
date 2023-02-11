@@ -10,7 +10,16 @@ import Activity from './components/Activity/Activity';
 import UpdateActivity from './components/UpdateActivity/UpdateActivity';
 import ProfilePublic from './components/ProfilePublic/ProfilePublic';
 
+import CreateActivity from './components/CreateActivity/CreateActivity';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
 function App() {
+  const THEME = createTheme({
+    typography: {
+      allVariants: { fontFamily: 'montserrat', color:'#194E48' }
+    }
+  });
+
   const [isSignedIn, setSignedIn] = useState(false); //tracks whether user is signed in
 
   //user details, which we can send to the Profile component instead of getUser again.
@@ -47,6 +56,7 @@ function App() {
   }
 
   return (
+  <ThemeProvider theme={THEME}>
   <div className="App">
     <Navbar updateSI = {UpdateSignedIn} statusSI = {isSignedIn} userid={userid}/>
     <div className='appContainer'>
@@ -56,10 +66,16 @@ function App() {
         <Route path = "/activities" element = {<ActivityList /> }/>
         <Route path = "/activities/:id" element = {<Activity statusSI = {isSignedIn}/>} />
         <Route path = "/activities/:id/update" element = {<UpdateActivity/>} />
+
+        <Route path = "/create-activity" element = {<CreateActivity/>} />
         <Route path = "/profile/:id" element = {<ProfilePublic userid={userid} phone={phone} email={email} />} />
       </Routes>
     </div>
-  </div>);
+  </div>
+
+  </ThemeProvider>
+  );
+
 }
 
 export default App;
