@@ -8,6 +8,8 @@ const CreateActivity = () => {
     const nameRef = useRef<HTMLTextAreaElement>(null);
     const [Desc, setDesc] = useState("");
     const descRef = useRef<HTMLTextAreaElement>(null);
+    const [time, setTime] = useState("");
+    const timeRef = useRef<HTMLTextAreaElement>(null);
     const [Location, setLocation] = useState("");
     const locationRef = useRef<HTMLTextAreaElement>(null);
 
@@ -15,6 +17,7 @@ const CreateActivity = () => {
         const data = {
             name:Name,
             desc:Desc,
+            time:time,
             location:Location
         }
 
@@ -28,11 +31,17 @@ const CreateActivity = () => {
         }
         fetch('http://localhost:3001/api/CreateActivity', fetchOptions)
         .then(response => {
+            if (response.status === 200) {
+                alert("Activity created successfully!")
+            } else {
+                alert("Something went wrong. Please make sure that you are signed in and all fields are filled!")
+            }
             return response.json()})
         .then(res => updateMessage(res.message));
 
         setName("");
         setDesc("");
+        setTime("");
         setLocation("");
     }
 
@@ -79,6 +88,16 @@ const CreateActivity = () => {
                     inputRef={descRef}
                     onChange={(event) => setDesc(event.target.value)}
                     value={Desc}/>
+                    <TextField 
+                    required
+                    fullWidth
+                    multiline
+                    id="time" 
+                    label="Date and Time"
+                    margin="dense"
+                    inputRef={timeRef}
+                    onChange={(event) => setTime(event.target.value)}
+                    value={time}/>
                     <TextField 
                     required
                     fullWidth

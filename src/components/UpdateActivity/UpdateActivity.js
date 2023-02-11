@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import "./UpdateActivity.css"
 
 const UpdateActivity = () => {
@@ -84,7 +84,11 @@ const UpdateActivity = () => {
     //Note: update post copies over from CreatePost
     return(
     <div>
-    {(updated ? <div className="plainText">{messageUpdate}</div> : //Checks if update attempt has been made
+    {(updated ? 
+    <>
+        <div className="plainText">{messageUpdate}</div> 
+        <Link class="f6 link dim ph3 pv2 dib white postViewDeleteConfirmBut" to={"/activities"}>Back to activities</Link>
+    </> : //Checks if update attempt has been made
     success ? ( //Update attempt has not been made. Checks if post can be retrieved successfully
     ownership ? //Post retrieved successfully. Check if logged in user is indeed its creator
     <div className="createWrapper"> 

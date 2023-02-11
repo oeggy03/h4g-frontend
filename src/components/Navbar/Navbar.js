@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import SignIn from "../Auth/Signin";
 import SignUp from "../Auth/Signup";
-import "./Navbar.css"
+import "./Navbar.css";
+import github from "./pngegg.png";
 
 function Navbar({updateSI, statusSI, userid}) {
     const [showSignIn, setShowSI] = useState(false) //whether we should show the signin popup
@@ -45,11 +46,10 @@ function Navbar({updateSI, statusSI, userid}) {
         <nav className = "navbar">
         <ul className='navLeft'>
             <a href='https://github.com/oeggy03/h4g-frontend' target="_blank" rel="noreferrer noopener">
-                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" className='github' alt="H4G"/>
+                    <img src={github} className='github' alt="H4G"/>
             </a>
-            <Link to="/" className='title'>Buddy4Good</Link>
+            <Link to="/" className='title'>{"</>"}Buddy4Good</Link>
             <CustomLink to = '/activities'>Activities</CustomLink>
-            <CustomLink to = '/findafriend'>Find a Friend</CustomLink>
         
         </ul>
         
