@@ -12,6 +12,9 @@ However, there is no lack of helpful, kind-hearted people in Singapore. Yet, the
 
 **Buddy4Good** is a platform for both persons with disabilities and able-bodied persons to connect with each other. Buddy4Good encourages the buddying up of able-bodied people (Best Buddy) with disabled people (Special Friend) to spend time doing activities together. These may be workshops, exercising, bird-watching, or any interest either party may have.
 
+## Our presentation slides
+https://bit.ly/h4gbuddy4g
+
 ## Set-up instructions 
 **Notes:**
 
