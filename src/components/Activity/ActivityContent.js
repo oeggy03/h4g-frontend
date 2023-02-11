@@ -50,7 +50,7 @@ const ActivityContent = ({userid, id, ownership, joined, creator, activity, part
     return (
     <div className="activityContentWrapper">
         <div className="activityViewIntroSec">
-            <div className="activityViewTitleLabel">activity title</div>
+            <div className="activityViewTitleLabel">title</div>
             <div className="activityViewTitle">{activity.name}</div>
             <div className="activityViewCreator"> <text className="activityViewCreatorLight">created by</text> {creator} </div>
             {ownership ? 
@@ -60,11 +60,15 @@ const ActivityContent = ({userid, id, ownership, joined, creator, activity, part
             </div> : null}
         </div>
         <div className="activityViewLocSec">
-            <div className="activityLocViewIntro">activity location</div>
+            <div className="activityLocViewIntro">location</div>
             <div className="activityLocView">{activity.location}</div>
         </div>
+        <div className="activityViewLocSec">
+            <div className="activityLocViewIntro">date and time</div>
+            <div className="activityLocView">{activity.time}</div>
+        </div>
         <div className="activityViewDescSec">
-            <div className="activityDescViewIntro">activity description</div>
+            <div className="activityDescViewIntro">description</div>
             <div className="activityDescView">{activity.desc}</div>
         </div>
         <div className="activityViewPartiSec">

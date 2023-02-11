@@ -68,7 +68,7 @@ function SpecialFriendsActivities() {
                                 <Box>
                                 <Typography 
                                 sx = {{
-                                    fontSize:20,
+                                    fontSize:23,
                                     fontWeight:"bold",
                                     whiteSpace:"pre-wrap",
                                     color:"#194E48"
@@ -77,11 +77,22 @@ function SpecialFriendsActivities() {
                                 </Typography>
                                 <Typography  
                                 sx = {{
-                                    fontSize:12,
+                                    fontSize:15,
+                                    fontWeight:"medium",
+                                    whiteSpace:"pre-wrap",
+                                    padding: "1%",
+                                    color:"#194E48"
+                                }}>
+                                    {"happening at: " + act.location}
+                                </Typography>
+                                <Typography  
+                                sx = {{
+                                    fontSize:13,
+                                    padding: "1%",
                                     whiteSpace:"pre-wrap",
                                     color:"#194E48"
                                 }}>
-                                    {act.location}
+                                    {"created on: " + act.postdate.slice(0, 10) + " at " + act.postdate.slice(11, 19)}
                                 </Typography>
                                 </Box>
                             </CardContent>

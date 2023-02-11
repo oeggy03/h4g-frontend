@@ -19,6 +19,9 @@
     color: #194e48;
 }
 
+.postViewDeleteConfirmBut{
+    background-color: #194e48;
+}
 .activityViewTitleLabel, .activityDescViewIntro, .activityViewPartiSecIntro, .activityLocViewIntro, .activityViewChatSecIntro {
     font-size: 20px;
     font-weight: 600;

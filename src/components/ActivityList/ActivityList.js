@@ -21,8 +21,9 @@ function ActivityList() {
             <Grid item xs={6}>
                 <Typography sx={{
                     "padding-top":"2%",
-                    "padding-bottom":"1%",
-                    "fontSize":20
+                    "padding-bottom":"2%",
+                    "fontSize":20,
+                    fontWeight:"500"
                 }}
                 >From your Best Buddies!</Typography>
                 <BestBuddiesActivities />
@@ -30,8 +31,9 @@ function ActivityList() {
             <Grid item xs={6}>
                 <Typography sx = {{
                     "padding-top":"2%",
-                    "padding-bottom":"1%",
-                    "fontSize":20
+                    "padding-bottom":"2%",
+                    "fontSize":20,
+                    fontWeight:"500"
                 }}
                 > From your Special Friends! </Typography>
                 <SpecialFriendsActivities />

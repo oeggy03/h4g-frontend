@@ -69,8 +69,8 @@ function Activity(statusSI) {
                 
             </div> : 
             <div className="postViewDeleteConfirm">
-                <div className="plainText">Post deleted successfully.</div>
-                <Link class="f6 link dim ph3 pv2 mb2 dib white bg-navy postViewDeleteConfirmBut" to={"/activities"}>Back to activities</Link>
+                <div className="plainText">Activity deleted successfully.</div>
+                <Link class="f6 link dim ph3 pv2 dib white postViewDeleteConfirmBut" to={"/activities"}>Back to activities</Link>
             </div>)}
         </div>)
 }

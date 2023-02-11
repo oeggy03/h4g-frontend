@@ -50,7 +50,6 @@ function Navbar({updateSI, statusSI, userid}) {
             </a>
             <Link to="/" className='title'>{"</>"}Buddy4Good</Link>
             <CustomLink to = '/activities'>Activities</CustomLink>
-            <CustomLink to = '/findafriend'>Find a Friend</CustomLink>
         
         </ul>
         

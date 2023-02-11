@@ -8,6 +8,8 @@ const CreateActivity = () => {
     const nameRef = useRef<HTMLTextAreaElement>(null);
     const [Desc, setDesc] = useState("");
     const descRef = useRef<HTMLTextAreaElement>(null);
+    const [time, setTime] = useState("");
+    const timeRef = useRef<HTMLTextAreaElement>(null);
     const [Location, setLocation] = useState("");
     const locationRef = useRef<HTMLTextAreaElement>(null);
 
@@ -15,6 +17,7 @@ const CreateActivity = () => {
         const data = {
             name:Name,
             desc:Desc,
+            time:time,
             location:Location
         }
 
@@ -38,6 +41,7 @@ const CreateActivity = () => {
 
         setName("");
         setDesc("");
+        setTime("");
         setLocation("");
     }
 
@@ -84,6 +88,16 @@ const CreateActivity = () => {
                     inputRef={descRef}
                     onChange={(event) => setDesc(event.target.value)}
                     value={Desc}/>
+                    <TextField 
+                    required
+                    fullWidth
+                    multiline
+                    id="time" 
+                    label="Date and Time"
+                    margin="dense"
+                    inputRef={timeRef}
+                    onChange={(event) => setTime(event.target.value)}
+                    value={time}/>
                     <TextField 
                     required
                     fullWidth
