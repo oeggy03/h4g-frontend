@@ -39,5 +39,8 @@ Note that the backend at https://github.com/oeggy03/h4g-backend has to be set up
 
 ## Future Plans
 
-- Host the database on Google Cloud SQL rather than MySQL for easier setup
-- Badges and a point system for people who create or join many activities
+- We were unable to deploy the product online due to the limited time we had and the costs involved.
+- We plan to host the MySQL database on Google Cloud SQL rather than MySQL server for easier setup.
+- Feature wise, we plan to implement badges and a point system for people who create or join many activities, in order to encourage use of the platform
+- We could also add a feature, which displays all handicapped-friendly areas in Singapore. However, we will need an api for that.
+- Set up a backend middleware to improve backend authentication and security.
