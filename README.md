@@ -1,6 +1,6 @@
 # Buddy4Good
 
-Buddy4Good is platform for both persons with disabilities and able-bodied persons to connect with each other. Buddy4Good encourages the buddying up of an able bodied person (Best Buddy) with a disabled person (Special Friend) to spend time doing activities together. These may be workshops, exercising, bird-watching, or any interest either party may have.
+Buddy4Good is a platform for both persons with disabilities and able-bodied persons to connect with each other. Buddy4Good encourages the buddying up of an able bodied person (Best Buddy) with a disabled person (Special Friend) to spend time doing activities together. These may be workshops, exercising, bird-watching, or any interest either party may have.
 
 
 ## Set-up for frontend
