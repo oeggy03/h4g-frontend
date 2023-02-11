@@ -7,7 +7,7 @@ body {
 }
 
 .navbar {
-    background-color: #98BA7D;
+    background-color: #194E48;
     opacity: 95%;
     height: 55px;
     font-size: 17px;
@@ -23,7 +23,7 @@ body {
 
 .navbar a {
     text-decoration: none;
-    color: #194E48;
+    color: #D6EFC7;
 }
 
 .title {
@@ -58,5 +58,5 @@ body {
 
 .navPath {
     font-weight: 600;
-    color: #194E48;
+    color: #D6EFC7;
 }

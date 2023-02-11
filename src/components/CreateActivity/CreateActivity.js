@@ -28,6 +28,11 @@ const CreateActivity = () => {
         }
         fetch('http://localhost:3001/api/CreateActivity', fetchOptions)
         .then(response => {
+            if (response.status === 200) {
+                alert("Activity created successfully!")
+            } else {
+                alert("Something went wrong. Please make sure that you are signed in and all fields are filled!")
+            }
             return response.json()})
         .then(res => updateMessage(res.message));
 
