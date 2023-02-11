@@ -11,7 +11,7 @@ Buddy4Good is platform for both persons with disabilities and able-bodied person
 
 
 ## Starting the web app
-Note that the frontend at https://github.com/oeggy03/h4g-backend has to be set up before starting the app.
+Note that the backend at https://github.com/oeggy03/h4g-backend has to be set up before starting the app.
 
 1. Run `go run main.go` in the project directory for the backend
 2. Run `npm start` in the project directory for the frontend
